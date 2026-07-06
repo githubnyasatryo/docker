@@ -70,6 +70,7 @@ services:
     container_name: watchtower
     restart: unless-stopped
     environment:
+      DOCKER_API_VERSION: "1.52"
       WATCHTOWER_CLEANUP: "true"
       WATCHTOWER_POLL_INTERVAL: "86400"
     volumes:
